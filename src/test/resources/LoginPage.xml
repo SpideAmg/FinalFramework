@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Applications smoke">
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="envName" value="browserstack"></parameter>
+    <parameter name="os" value="windows"></parameter>
+    <parameter name="osVersion" value="11"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="99"></parameter>
+    <parameter name="url" value="https://swappa.com/"></parameter>
+<!--    <test name="Home Page Test">-->
+<!--        <classes>-->
+<!--            <class name="SwappaWebSite.HomePageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Phones sectiTest">-->
+<!--        <classes>-->
+<!--            <class name="SwappaWebSite.LoginPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Phones sectiTest">-->
+<!--        <classes>-->
+<!--            <class name="SwappaWebSite.CamerasTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Phones sectTest">-->
+<!--        <classes>-->
+<!--            <class name="SwappaWebSite.MenuPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Phones sectioTest">-->
+<!--        <classes>-->
+<!--            <class name="SwappaWebSite.SearchBarTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Phones section ">
+        <classes>
+            <class name="SwappaWebSite.TopMenuHomePageTest"></class>
+        </classes>
+    </test>
+
+
+
+
+
+</suite>
+

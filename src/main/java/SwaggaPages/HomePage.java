@@ -16,38 +16,21 @@ public class HomePage extends CommonAPI {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(3) > ul > li:nth-child(3) > a > i")
-    WebElement SearchLogo;
-    @FindBy(css = "#slide_search_form > div > input")
-    WebElement SearchBar;
-    @FindBy(css = "#slide_search_form > div > input")
-    WebElement clearTheSearch;
-    @FindBy(css = "#slide_search > div.offcanvas-header > button")
-    WebElement CloseTheSearchBar;
-    @FindBy(css = "#slide_search_form > div")
-    WebElement Searchbtninsideshearchbar;
+
     @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(3) > ul > li:nth-child(2) > a > i")
     WebElement ShoppingCart;
     @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(1) > ul > li:nth-child(1) > a > i")
     WebElement Menu;
-    @FindBy(css = "#slide_menu > div.offcanvas-body > div:nth-child(2) > a:nth-child(6)")
-    WebElement ForumsSection;
-    @FindBy(css = "#slide_menu > div.offcanvas-body > div.row.row-cols-2.mb-3 > div:nth-child(1) > a")
-    WebElement loginBtn;
-
-    @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(1) > ul > li:nth-child(3) > a > i")
-    WebElement Sell;
     @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(1) > ul > li:nth-child(2) > a > i")
     WebElement Help;
+    @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(1) > ul > li:nth-child(3) > a > i")
+    WebElement Sell;
 
-    @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(3) > ul > li:nth-child(1) > a > i")
-    WebElement Loginbtn;
-    @FindBy(css = "#id_username_oc")
-    WebElement EmailAdress;
-    @FindBy(css = "#id_password_oc")
-    WebElement Pass;
-    @FindBy(css = "#offcanvasFormLogin > button")
-    WebElement SignInBtn;
+
+
+
+
+
 
 
 
@@ -88,9 +71,8 @@ public class HomePage extends CommonAPI {
 
     @FindBy(css = "#section_billboard > div.row.justify-content-center.gy-3.mt-1 > div:nth-child(1) > a")
     WebElement SellWithSwappaBtn;
-
-
-
+    @FindBy(css = "#primaryNav > nav > div > div > div:nth-child(3) > ul > li:nth-child(3) > a > i")
+    WebElement SearchLogo;
 
     @FindBy(css = "#section_billboard > div.row.row-cols-2.row-cols-md-3.row-cols-lg-5.row-cols-xl-5.row-cols-xxl-6.justify-content-center > div:nth-child(2) > div > a.image.bgg-green-100 > img")
     WebElement PhonesImage;
@@ -110,6 +92,10 @@ public class HomePage extends CommonAPI {
     WebElement HomeTechImage;
     @FindBy(css = "#section_billboard > div.row.row-cols-2.row-cols-md-3.row-cols-lg-5.row-cols-xl-5.row-cols-xxl-6.justify-content-center > div:nth-child(9) > div > a.image.bgg-cyan-100 > img")
     WebElement CamerasImage;
+
+
+
+
 
     @FindBy(css = "#section_top > div > div.row > div.col-12.col-lg-4 > a")
     WebElement SwappaLocalBtn;
@@ -131,20 +117,54 @@ public class HomePage extends CommonAPI {
     @FindBy(css = "#section_main > div:nth-child(1) > div > div:nth-child(6) > div > div > div.clearfix > a")
     WebElement NintendoSwitch;
 
+    //-------------------------------------bottom menu Locators---------------------
+
+    @FindBy(css = "#press_row > div > div:nth-child(5) > a > img")
+    WebElement CNETLogo;
+    @FindBy(css = "#press_row > div > div:nth-child(4) > a > img")
+    WebElement LifeHacker;
+    @FindBy(xpath = "//*[@id=\"press_row\"]/div/div[3]/a")
+    WebElement TomSGuide;
+    @FindBy(css = "#press_row > div > div:nth-child(2) > a > img")
+    WebElement Fortune;
+    @FindBy(css = "#press_row > div > div:nth-child(1) > a > img")
+    WebElement WSJ;
+    @FindBy(css = "#section_more > h2:nth-child(20)")
+    WebElement SwappaReviews;
+    @FindBy(css = "#section_more > div:nth-child(2) > h2")
+
+    WebElement RecognizedForValueAndSafetyText;
+
+    @FindBy(css = "body > footer > div > div.row.row-cols-2.row-cols-sm-3.row-cols-lg-6.mb-3.ms-sm-3.ms-md-5.ms-lg-3.ms-xl-5 > div:nth-child(5) > ul > li:nth-child(3) > a")
+    WebElement B2BExchangebtn;
+
+    @FindBy(css = "#review-arrow-right > div > div")
+    WebElement RightButtonCarroussel;
+
+    @FindBy(css = "#review-arrow-left > div > div > div > svg")
+    WebElement LeftButtonCarroussel;
+
+    @FindBy(css = "#footer_logo")
+    WebElement BottomLogo;
+
+    @FindBy(css = "body > footer > div > div.row.row-cols-1.row-cols-md-3 > div.col.py-1.social_links.d-flex.justify-content-center.align-items-center > a:nth-child(1) > i")
+    WebElement FacebookLogo;
+
+
+    //------------------------------------------------------//
+
+
+
+
     //reusable method
 
-    public void HoverOverTopRightMenu(WebDriver driver) {
 
-        hoverOver(driver, ShoppingCart);
-        hoverOver(driver, SearchLogo);
-        hoverOver(driver, Loginbtn);
 
-    }
     public void HoverOverTopLeftMenu(WebDriver driver) {
 
         hoverOver(driver, Sell);
         hoverOver(driver, Help);
-        hoverOver(driver,Menu);
+        hoverOver(driver, Menu);
     }
 
     public void HoverOverMenu(WebDriver driver) {
@@ -159,15 +179,9 @@ public class HomePage extends CommonAPI {
         hoverOver(driver, Iphones);
 
 
-
     }
 
-    public void AccessForumSection(){
 
-       click(Menu);
-       click(ForumsSection);
-
-    }
 
 
     public void ClickOnImage(WebDriver driver) {
@@ -204,23 +218,12 @@ public class HomePage extends CommonAPI {
     }
 
 
-    public void TypeInSearchBar(String element){
-
-        click(SearchLogo);
-        type(SearchBar,element);
-        click(Searchbtninsideshearchbar);
-        waitFor(2);
-        //click(clearTheSearch);
-        clear(clearTheSearch);
-        click(CloseTheSearchBar);
-
-    }
-
-    public void ClickOnSwappaLocal(){
+    public void ClickOnSwappaLocal() {
 
         click(SwappaLocalBtn);
 
     }
+
     public void ScrollDownToShopBy(WebDriver driver) {
         WebElement element = ShopPhonesByCarrier;
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -228,52 +231,53 @@ public class HomePage extends CommonAPI {
     }
 
     //create a method to scroll
-    public void ScrollToView(WebElement element,WebDriver driver) {
-        JavascriptExecutor js=(JavascriptExecutor)driver;
+    public void ScrollToView(WebElement element, WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
 
     }
+
     //call the method to scroll
-    public void ScrollToViewShopPhonesByCarrier(WebDriver driver){
+    public void ScrollToViewShopPhonesByCarrier(WebDriver driver) {
 
-        ScrollToView(ShopPhonesByCarrier,driver);
+        ScrollToView(ShopPhonesByCarrier, driver);
         waitFor(2);
 
 
     }
 
-    public void ScrollToViewItemsInFeaturedProducts(WebDriver driver){
+    public void ScrollToViewItemsInFeaturedProducts(WebDriver driver) {
 
-        ScrollToView(FeaturedProducts,driver);
+        ScrollToView(FeaturedProducts, driver);
         waitFor(2);
 
 
     }
 
 
+    public void HoverOverElementInShopPhonesByCarriers(WebDriver driver) {
 
-    public void HoverOverElementInShopPhonesByCarriers(WebDriver driver){
+        hoverOver(driver, ATT);
+        hoverOver(driver, TMobile);
+        hoverOver(driver, Verizon);
+        hoverOver(driver, Unlocked);
 
-        hoverOver(driver,ATT);
-        hoverOver(driver,TMobile);
-        hoverOver(driver,Verizon);
-        hoverOver(driver,Unlocked);
+    }
+
+
+    public void HoverOverItemsOnFeaturedProducts(WebDriver driver) {
+
+        hoverOver(driver, AppleWatch);
+        hoverOver(driver, GooglePixel);
+        hoverOver(driver, AppleIphoneX);
+        hoverOver(driver, One7Plus);
+        hoverOver(driver, SamsungGalaxyS10);
+        hoverOver(driver, NintendoSwitch);
+
 
     }
 
-
-    public void HoverOverItemsOnFeaturedProducts(WebDriver driver){
-
-        hoverOver(driver,AppleWatch);
-        hoverOver(driver,GooglePixel);
-        hoverOver(driver,AppleIphoneX);
-        hoverOver(driver,One7Plus);
-        hoverOver(driver,SamsungGalaxyS10);
-        hoverOver(driver,NintendoSwitch);
-
-
-    }
-    public void ClickOnEachItemOnFeaturedProducts(WebDriver driver){
+    public void ClickOnEachItemOnFeaturedProducts(WebDriver driver) {
 
         click(AppleWatch);
         driver.navigate().back();
@@ -300,17 +304,103 @@ public class HomePage extends CommonAPI {
 
     }
 
-    public void loginTesting(String Username,String Password){
 
-        click(Menu);
-        click(loginBtn);
-        type(EmailAdress,Username);
-        type(Pass,Password);
-        click(SignInBtn);
+
+    public void clickWithJS2(WebDriver driver, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void BottomMenu(WebDriver driver) {
+        ScrollToView(RecognizedForValueAndSafetyText, driver);
+        waitFor(3);
+       click(CNETLogo);
+        ScrollToView(CNETLogo, driver);
+        waitFor(3);
+        click(LifeHacker);
+        click(CNETLogo);
+        clickWithJS2(driver, TomSGuide);
+        click(Fortune);
+        click(WSJ);
+        waitFor(3);
 
 
     }
 
+    public void BottomMenu2(WebDriver driver) {
+        ScrollToView(B2BExchangebtn, driver);
+        waitFor(3);
+        click(B2BExchangebtn);
+
+
+    }
+
+    public void TrustPilotSEction(WebDriver driver) {
+        int count = 0;
+
+        ScrollToView(B2BExchangebtn, driver);
+        waitFor(3);
+        driver.switchTo().frame(0);
+        waitFor(2);
+        do {
+            count++;
+            click(RightButtonCarroussel);
+            waitFor(1);
+        } while (count < 4);
+        System.out.print("Switched to new Frame and CLick ont the Right button 3 times");
+
+        do {
+            count++;
+            click(LeftButtonCarroussel);
+
+            waitFor(1);
+
+        } while (count < 4);
+
+
+    }
+
+
+    public void ClickOnSwappaLogoAtTheBottomOfThePage(WebDriver driver) {
+
+        ScrollToView(BottomLogo, driver);
+        waitFor(2);
+        click(BottomLogo);
+
+
+    }
+
+    public void ClickOnFacebookLogo(WebDriver driver) {
+        ScrollToView(BottomLogo, driver);
+        waitFor(2);
+        click(FacebookLogo);
+
+    }
+
+    public void ClickOnB2BExchange(WebDriver driver) {
+        ScrollToView(BottomLogo, driver);
+        waitFor(2);
+        click(B2BExchangebtn);
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+//        waitFor(2);
+
+
+
+//        if(!LeftButtonCarroussel.isEnabled())
+//            System.out.print("Click on Left and Right button of the Carroussel is made successfully!");
 
 
 
@@ -340,8 +430,6 @@ public class HomePage extends CommonAPI {
 //        WebDriverWait wait = new WebDriverWait(driver,30);
 //        //wait.until(ExpectedConditions.visibilityOfElementLocated());
 
-
-    }
 
 
 

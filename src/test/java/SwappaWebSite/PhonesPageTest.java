@@ -11,7 +11,7 @@ public class PhonesPageTest extends CommonAPI {
 
         PhonesPage phonesPage = new PhonesPage(getDriver());
 
-        phonesPage.SelectUnlockedIPhone(getDriver());
+        phonesPage.SelectUnlockedIPhones(getDriver());
 
     }
    @Test
@@ -32,7 +32,7 @@ public class PhonesPageTest extends CommonAPI {
 
     }
 
-   @Test
+  //@Test
     public void SelectUnlockedMotorola(){
 
         PhonesPage phonesPage = new PhonesPage(getDriver());
@@ -40,7 +40,7 @@ public class PhonesPageTest extends CommonAPI {
         phonesPage.ScrollDownAndSelectUnlockedMotorola(getDriver());
 
     }
-     @Test
+    @Test
     public void SelectUnlockedOnePlus(){
 
         PhonesPage phonesPage = new PhonesPage(getDriver());
@@ -50,7 +50,7 @@ public class PhonesPageTest extends CommonAPI {
     }
 
 
-    @Test
+   // @Test
     public void SelectUnlockedLG(){
 
         PhonesPage phonesPage = new PhonesPage(getDriver());
@@ -58,6 +58,8 @@ public class PhonesPageTest extends CommonAPI {
         phonesPage.ScrollDownAndSelectUnlockedLG(getDriver());
 
     }
+
+
 
 
 
